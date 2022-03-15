@@ -1,5 +1,7 @@
 package com.starter.sample.CarAPI.ServiceImpl;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.starter.sample.CarAPI.Model.Car;
@@ -20,6 +22,12 @@ public class CarServiceImpl implements CarService{
 	@Override
 	public Car saveCar(Car car) {
 		return carRepo.save(car);
+	}
+
+
+	@Override
+	public List<Car> getAllCars() {
+		return carRepo.findAll();
 	}
 
 
